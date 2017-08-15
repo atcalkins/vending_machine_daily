@@ -5,10 +5,12 @@ describe("Homepage router", () => {
   describe("GET /", () => {
     it("will return a status code of 200", () => {
       request(app)
-      .get("/")
+      .get("/users/1/items")
+      parsed = JSON.parse(req.text);
       .expect(200)
       .expect((req) => {
-        req.text.includes("This page was rendered")
+        req.text.includes(" {items: [name: yay]}")
+        return true
       });
     });
   });
