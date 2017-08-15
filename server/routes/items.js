@@ -1,10 +1,14 @@
 const express = require('express');
 const router = express.Router();
+const db = require('../models')
+const Item = db.item
 
 router.get("/api/customer/items", (req, res) => {
-  res.json({
-    status: "success",
-    data: []
+  Item.findAll().then((items) => {
+    res.json({
+      status: "success",
+      data: items
+  })
   });
 });
 
