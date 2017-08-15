@@ -1,9 +1,9 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
-  var data = sequelize.define('item', {
-    description: DataTypes.TEXT,
+  var item = sequelize.define('item', {
+    description: DataTypes.STRING,
     cost: DataTypes.INTEGER,
-    quantitiy: DataTypes.INTEGER
+    quantity: DataTypes.INTEGER
   }, {
     classMethods: {
       associate: function(models) {
@@ -11,5 +11,5 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
-  return data;
+  return item;
 };
