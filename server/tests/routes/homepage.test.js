@@ -5,7 +5,7 @@ describe("Homepage router", () => {
   describe("GET /", () => {
     it("will return a status code of 200", () => {
       request(app)
-      .get("/users/1/items")
+      .get("/")
       parsed = JSON.parse(req.text);
       .expect(200)
       .expect((req) => {
