@@ -12,4 +12,4 @@ router.get("/api/customer/items", (req, res) => {
   })
 })
 
-module.exports = router
+module.exports = router;
