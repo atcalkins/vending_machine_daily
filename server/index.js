@@ -56,7 +56,6 @@ app.use(
 
 app.use("/", require("./routes/homepage"));
 app.use("/api/customer/items", require('./routes/items'));
-app.use("/api/customer/items/:itemId/purchases", require('./routes/purchase'));
 // app.use('/api/vendor/purchases', require('./routes/totalPurchase'));
 // app.use('/api/vendor/money', require('./routes/money'));
 // **************** ROUTES ↑
